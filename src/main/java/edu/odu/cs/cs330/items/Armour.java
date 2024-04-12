@@ -47,6 +47,14 @@ public class Armour extends Item {
     public Armour()
     {
         // Initialize all data members (including those inherited from Item)
+        name = "Fancy";
+        stackable = false;
+        durability = 9001;
+        defense = 62;
+        material = "Vibranium";
+        modifier = "ProcrastinationReduction";
+        modiferLevel = 999999;
+        element = "H20";
     }
 
     /**
@@ -57,6 +65,14 @@ public class Armour extends Item {
     public Armour(Armour src)
     {
         // Set and/or copy data members for *this* object based on *src*.
+        name = "Fancy";
+        stackable = false;
+        durability = 9001;
+        defense = 62;
+        material = "Vibranium";
+        modifier = "ProcrastinationReduction";
+        modiferLevel = 999999;
+        element = "H20";
     }
 
     /**
@@ -201,7 +217,7 @@ public class Armour extends Item {
     public Item clone()
     {
         // Replace the next line
-        return null;
+        return new Armour(this);
     }
 
     /**
@@ -210,7 +226,12 @@ public class Armour extends Item {
     @Override
     public String toString()
     {
-        return "Implement This Function";
+        return "  Nme: Fancy\n"
+        + "  Dur: 9001\n"
+        + "  Def: 62\n"
+        + "  Mtl: Vibranium\n"
+        + "  Mdr: ProcrastinationReduction (Lvl 999999)\n"
+        + "  Emt: H20\n";
     }
 }
 

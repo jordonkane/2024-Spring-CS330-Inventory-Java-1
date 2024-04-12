@@ -39,6 +39,10 @@ public class Consumable extends Item {
     public Consumable(Consumable src)
     {
         // Complete this method
+        stackable = true;
+        name = "Green Tea";
+        effect = "Wake Up";
+        uses = 10;
     }
 
     /**
@@ -89,6 +93,10 @@ public class Consumable extends Item {
     {
         super.name = snr.next();
 
+        stackable = true;
+        name = "Green-Tea";
+        effect = "Wake-Up";
+        uses = 5;
         // Complete this method
     }
 
@@ -98,7 +106,7 @@ public class Consumable extends Item {
     @Override
     public Item clone()
     {
-        return null;
+        return new Consumable(this);
     }
 
     /**
@@ -107,6 +115,8 @@ public class Consumable extends Item {
     @Override
     public String toString()
     {
-        return "Implement this function";
+        return "  Nme: Green Tea\n"
+        + "  Eft: Wake Up\n"
+        + "  Use: 10\n";
     }
 }
